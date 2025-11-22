@@ -8,32 +8,8 @@ This project is a small, accessible, touch-enabled image slider built with plain
 **Files**
 - `index.html`: Markup for the slider, navigation buttons, and image items.
 - `style.css`: Styling for layout, controls, responsive rules, and accessibility utilities (e.g., `.sr-only`).
-- `index.js`: Slider logic — autoplay, pointer/touch handling, keyboard support, pagination dots and play/pause control, ARIA/live-region announcements.
-
-**What I changed (step-by-step)**
-1. Added base styles and layout in `style.css`.
-   - Global resets, body background, font smoothing.
-   - `.slider`, `.slider__wrapper`, and `.slider__item` layout so slides line up horizontally.
-   - Smooth transform transitions for slide movement.
-2. Styled navigation buttons in `style.css`.
-   - Positioned left/right buttons, SVG sizing, hover/focus states.
-3. Improved pointer interaction and performance.
-   - Set `.slider { touch-action: pan-y; }` so browser preserves vertical scrolling but allows the script to receive horizontal pointer gestures.
-   - Disabled image dragging/selection during interactions (`user-select: none`, `-webkit-user-drag: none`).
-4. Implemented autoplay and pointer-event-based slider in `index.js`.
-   - Uses `pointerdown`/`pointermove`/`pointerup` to support mouse, touch and stylus consistently.
-   - Calculates `translateX` in pixels based on slider width for robust responsive behavior.
-   - Autoplay timer with configurable delay and pause-on-hover/focus.
-   - Keyboard left/right navigation (slider is focusable via `tabindex`).
-5. Added pagination dots and a play/pause control.
-   - Dots are created dynamically and reflect the active slide.
-   - Clicking dots jumps to a slide and restarts autoplay.
-   - Play/pause toggles autoplay and updates the control label/icon.
-6. Improved accessibility and semantics.
-   - `loading="lazy"` added to images for better performance.
-   - `role="region"`, `aria-roledescription="carousel"`, and `aria-label` applied to the slider container.
-   - Active slides get `role="group"`, `aria-roledescription="slide"`, and `aria-label="Slide X of Y"`.
-   - A visually-hidden live region (`aria-live="polite"`) announces slide changes with a short summary (index + image alt text).
+- `slider.js`: Slider logic — autoplay, pointer/touch handling, keyboard support, pagination dots and play/pause control, ARIA/live-region announcements.
+- `index.js`: Load DOM contend and call slider.js.
 
 **How the slider works (technical details)**
 - Markup: `.slider` contains `.slider__wrapper` which contains multiple `.slider__item` elements each holding an `<img>`.
