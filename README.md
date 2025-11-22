@@ -63,17 +63,6 @@ This project is a small, accessible, touch-enabled image slider built with plain
 - Confirm live-region announces slide changes with a screen reader.
 - Inspect CSS on mobile widths to ensure images scale and controls remain usable.
 
-**Troubleshooting**
-- If swipe isn't recognized: ensure the browser supports Pointer Events (modern browsers do). If not, fallback to touch/mouse events may be needed.
-- If the autoplay seems jittery: check that `transition` and `requestAnimationFrame` updates are working; reduce heavy operations during pointer dragging.
-- If images cause layout shifts: consider adding explicit width/height attributes, or use a placeholder with fixed aspect ratio.
-
-**Next improvements (suggestions)**
-- Add lazy-loading placeholders or low-quality image placeholders (LQIP).
-- Add unit/behavioral tests with Playwright or Cypress to automate cross-device checks.
-- Add a small settings UI so end-users can toggle autoplay, animation speed, or switch to a RTL mode.
-- Add support for infinite looping with cloned slides if you want continuous circular behavior without a noticeable jump.
 
 
-Enjoy — tell me which next step you'd like me to implement.
 # Image-Slider-Touch
