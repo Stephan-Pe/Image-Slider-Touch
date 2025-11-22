@@ -14,9 +14,9 @@ This project is a small, accessible, touch-enabled image slider built with plain
 **How the slider works (technical details)**
 - Markup: `.slider` contains `.slider__wrapper` which contains multiple `.slider__item` elements each holding an `<img>`.
 - Movement: The script sets `wrapper.style.transform = 'translateX(...)'` to move slides. The target translate value is `-index * slideWidth`.
-- Swiping: On `pointerdown` we record the start X; on `pointermove` we update a `currentTranslate` and render using `requestAnimationFrame` for smooth updates; on `pointerup` we compare the dragged distance to a threshold (20% of width or 50px minimum) to decide whether to change slides or snap back.
+- Swiping: On `pointerdown` you record the start X; on `pointermove` you update a `currentTranslate` and render using `requestAnimationFrame` for smooth updates; on `pointerup` you compare the dragged distance to a threshold (20% of width or 50px minimum) to decide whether to change slides or snap back.
 - Autoplay: A timer (`setInterval`) calls `next()` every `AUTOPLAY_DELAY` milliseconds; autoplay is paused during pointer interactions and when the slider is hovered or focused.
-- Controls: Prev/Next buttons use `[data-carousel-button]` attributes; dots and play/pause are created dynamically by `index.js` and kept in sync with the current slide.
+- Controls: Prev/Next buttons use `[data-carousel-button]` attributes;
 
 **Accessibility considerations**
 - The slider is navigable via keyboard (left/right arrows when focused).
