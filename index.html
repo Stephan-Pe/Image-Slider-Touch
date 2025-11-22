@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title"><h1>ImageSlider</h1></div>
+    <div class="slider" tabindex="0" role="region" aria-label="image carousel" aria-roledescription="Image Carousel" data-carousel>
+         <!-- Additional required wrapper -->
+   				<button aria-label="vorheriges Bild" title="vorheriges Bild" class="slide-btn" id="goLeft" data-carousel-button="prev">
+					<svg
+						id="goToLeft" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 512">
+						<!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+						<path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/>
+					</svg>
+				</button>
+				<button aria-label="naechstes Bild" title="naechstes Bild" class="slide-btn" id="goRight" data-carousel-button="next">
+					<svg
+						id="goToRight" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 512">
+						<!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+						<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/>
+					</svg>
+				</button>
+        <div class="slider__wrapper" data-slides>
+            <div id="slide-1" class="slider__item"><img loading="lazy" src="https://picsum.photos/id/1015/900/600" alt="Mountain landscape with lake"></div>
+            <div id="slide-2" class="slider__item"><img loading="lazy" src="https://picsum.photos/id/1016/900/600" alt="Forest path in autumn"></div>
+            <div id="slide-3" class="slider__item"><img loading="lazy" src="https://picsum.photos/id/1018/900/600" alt="Snowy mountain peak"></div>
+            <div id="slide-4" class="slider__item"><img loading="lazy" src="https://picsum.photos/id/1020/900/600" alt="Coastal cliffs and ocean"></div>
+            <div id="slide-5" class="slider__item"><img loading="lazy" src="https://picsum.photos/id/1024/900/600" alt="City skyline at dusk"></div>
+        </div>
+
+        <!-- Static controls: pagination dots + play/pause -->
+        <div class="carousel-controls">
+            <div class="dots" aria-hidden="false">
+                <button class="dot" type="button" data-slide="0" aria-controls="slide-1" aria-label="Go to slide 1" aria-pressed="false"></button>
+                <button class="dot" type="button" data-slide="1" aria-controls="slide-2" aria-label="Go to slide 2" aria-pressed="false"></button>
+                <button class="dot" type="button" data-slide="2" aria-controls="slide-3" aria-label="Go to slide 3" aria-pressed="false"></button>
+                <button class="dot" type="button" data-slide="3" aria-controls="slide-4" aria-label="Go to slide 4" aria-pressed="false"></button>
+                <button class="dot" type="button" data-slide="4" aria-controls="slide-5" aria-label="Go to slide 5" aria-pressed="false"></button>
+            </div>
+            <button class="play-pause" type="button" aria-label="Pause autoplay" aria-pressed="true">❚❚</button>
+        </div>
+    </div>
+    
+</body>
+<script type="module" src="index.js"></script>
+</html>

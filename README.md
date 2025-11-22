@@ -74,10 +74,6 @@ This project is a small, accessible, touch-enabled image slider built with plain
 - Add a small settings UI so end-users can toggle autoplay, animation speed, or switch to a RTL mode.
 - Add support for infinite looping with cloned slides if you want continuous circular behavior without a noticeable jump.
 
-If you'd like, I can:
-- Add `aria-controls` attributes linking dots to slides and explicit `id`s on slides.
-- Add visual focus indicators for keyboard navigation.
-- Add a small demo script or automated test to exercise interactions.
 
 Enjoy — tell me which next step you'd like me to implement.
 # Image-Slider-Touch
